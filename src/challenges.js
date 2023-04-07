@@ -1,8 +1,20 @@
 // Desafio 1 - Crie a função compareTrue
+const valueA = true;
+const valueB = true;
+const valueC = false;
+const valueD = false;
 
-
-
-
+function compareTrue (val1, val2) {
+    if (val1 && val2){
+        return true
+    } else{
+        return false
+    }
+} 
+ console.log(compareTrue(valueA,valueC));
+ console.log(compareTrue(valueC,valueD));
+ console.log(compareTrue(valueA,valueB));
+ 
 // Desafio 2 - Crie a função splitSentence
 
 // Desafio 3 - Crie a função concatName
