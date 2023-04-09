@@ -4,7 +4,9 @@ const valueB = true;
 const valueC = false;
 const valueD = false;
 
-const compareTrue = (val1, val2) => (val1 && val2 === true)? true : false;
+function compareTrue(val1, val2) {
+    return (val1 && val2 === true) ? true : false;
+}
 
  console.log(compareTrue(valueA,valueC));
  console.log(compareTrue(valueC,valueD));
@@ -12,7 +14,9 @@ const compareTrue = (val1, val2) => (val1 && val2 === true)? true : false;
  
 // Desafio 2 - Crie a função splitSentence
 
-const splitSentence = string => string.split(" ");
+function splitSentence(string) {
+    return string.split(" ");
+}
 
 console.log(splitSentence(`go Trybe`));
 console.log(splitSentence(`vamo que vamo`));
