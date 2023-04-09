@@ -4,20 +4,32 @@ const valueB = true;
 const valueC = false;
 const valueD = false;
 
-function compareTrue (val1, val2) {
-    if (val1 && val2){
-        return true
-    } else{
-        return false
-    }
-} 
+const compareTrue = (val1, val2) => (val1 && val2 === true)? true : false;
+
  console.log(compareTrue(valueA,valueC));
  console.log(compareTrue(valueC,valueD));
  console.log(compareTrue(valueA,valueB));
  
 // Desafio 2 - Crie a função splitSentence
 
+const splitSentence = string => string.split(" ");
+
+console.log(splitSentence(`go Trybe`));
+console.log(splitSentence(`vamo que vamo`));
+console.log(splitSentence(`foguete`));
+
 // Desafio 3 - Crie a função concatName
+
+function concatName(array1){
+    for(index in array1){
+        const a = array1[index.length-1];
+        const b = array1[0];
+        return ` ${a} , ${b}`
+}
+
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+
+
 
 // Desafio 4 - Crie a função footballPoints
 
