@@ -14,8 +14,8 @@ function compareTrue(val1, val2) {
  
 // Desafio 2 - Crie a função splitSentence
 
-function splitSentence(string) {
-    return string.split(" ");
+function splitSentence(sentence) {
+    return sentence.split(" ");
 }
 
 console.log(splitSentence(`go Trybe`));
@@ -24,18 +24,26 @@ console.log(splitSentence(`foguete`));
 
 // Desafio 3 - Crie a função concatName
 
+const arrayA = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+const arrayB = ['foguete', 'não', 'tem', 'ré'];
+const arrayC = ['captain', 'my', 'captain'];
+
 function concatName(array1){
-    for(index in array1){
-        const a = array1[index.length-1];
-        const b = array1[0];
-        return ` ${a} , ${b}`
+    for (index = 0; index < array1.length; index += 1){
+        return `${array1[array1.length-1]} , ${array1[0]}`;
+  }
 }
-
-console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
-
-
+console.log(concatName(arrayA));
+console.log(concatName(arrayB));
+console.log(concatName(arrayC));
 
 // Desafio 4 - Crie a função footballPoints
+
+const footballPoints = (wins, ties) => (wins * 3) + ties;
+
+console.log(footballPoints(14, 8));
+console.log(footballPoints(1, 2));
+console.log(footballPoints(0, 0));
 
 // Desafio 5 - Crie a função highestCount
 
