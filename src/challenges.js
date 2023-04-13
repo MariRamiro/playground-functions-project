@@ -1,91 +1,56 @@
 // Desafio 1 - Crie a função compareTrue
-const valueA = true;
-const valueB = true;
-const valueC = false;
-const valueD = false;
 
-function compareTrue(val1, val2) {
-    return (val1 && val2 === true) ? true : false;
-}
-
- console.log(compareTrue(valueA,valueC));
- console.log(compareTrue(valueC,valueD));
- console.log(compareTrue(valueA,valueB));
+const compareTrue = (val1, val2) => (val1 && val2) ? true : false;
  
 // Desafio 2 - Crie a função splitSentence
 
-function splitSentence(sentence) {
-    return sentence.split(" ");
-}
-
-console.log(splitSentence(`go Trybe`));
-console.log(splitSentence(`vamo que vamo`));
-console.log(splitSentence(`foguete`));
+const splitSentence = sentence => sentence.split(" ");
 
 // Desafio 3 - Crie a função concatName
 
-const arrayA = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
-const arrayB = ['foguete', 'não', 'tem', 'ré'];
-const arrayC = ['captain', 'my', 'captain'];
-
-function concatName(array1){
-    for (index = 0; index < array1.length; index += 1){
-        return `${array1[array1.length-1]} , ${array1[0]}`;
-  }
-}
-console.log(concatName(arrayA));
-console.log(concatName(arrayB));
-console.log(concatName(arrayC));
+const concatName = array1 =>`${array1[array1.length-1]}, ${array1[0]}`;
 
 // Desafio 4 - Crie a função footballPoints
 
 const footballPoints = (wins, ties) => (wins * 3) + ties;
 
-console.log(footballPoints(14, 8));
-console.log(footballPoints(1, 2));
-console.log(footballPoints(0, 0));
-
 // Desafio 5 - Crie a função highestCount
-const numbersA = [9, 1, 2, 3, 9, 5, 7];
-const numbersB = [0, 4, 4, 4, 9, 2, 1];
-const numbersC = [0, 0, 0];
-const maiorNumero = [0];
-let contador = 0;
-
-function highestCount(numbers){
-  for(let index = 0; index < numbers.length; index +=1){
-      if(numbers[index] > maiorNumero){
-      contador =+ 1;
-      console.log(contador); 
-    }
-  }
-}
-console.log(highestCount(numbersA));
+const highestCount = numArray => {
+  let higherNumber = Math.max.apply(null, numArray);
+  let count = 0;
+  for(let item of numArray) {
+      if(item === higherNumber){
+      count +=1
+  };
+};
+return count;
+};
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 
-
-function calcTriangleArea(base,height){
-  return (base * altura) / 2 ;
-};
-function calcRectangleArea(base,height){
-  return base * altura ;
-};
-function calcAllAreas(base, height,form){
-  if (form === triangle){
+const calcTriangleArea = (base, height) => (base * altura) / 2 ;
+const calcRectangleArea = (base, height) => base * altura ;
+const calcAllAreas = (base, height, form) => {
+  if (form === `triangle`){
       return `O valor da área do triângulo é de:${calcTriangleArea(base,height)}`;
-  }if (form === rectangle){
+  }if (form === `rectangle`){
       return `O valor da área do retângulo é de:${calcRectangleArea(base,height)}`;
   }else{
       return `Não foi possível fazer o cálculo, insira uma forma geométrica válida`;
   };
 };
 
-console.log(calcAllAreas(10,50,triangle));
-console.log(calcAllAreas(10,50,rectangle));
-
-
 // Desafio 7 - Crie a função catAndMouse
+
+const catAndMouse = (mouse, cat1, cat2) => {
+  if(Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)){
+      return `cat2`;
+  }else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)){
+      return `cat1`;
+  }else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)){
+      return `os gatos trombam e o rato foge`;
+  };
+}
 
 // Desafio 8 - Crie a função fizzBuzz
 
