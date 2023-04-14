@@ -1,5 +1,5 @@
 // Desafio 1 - Crie a função compareTrue
-const compareTrue = (val1, val2) => (val1 && val2) ? 'true': 'false';
+const compareTrue = (val1 && val2); Boolean;
 
 // Desafio 2 - Crie a função splitSentence
 
@@ -30,13 +30,18 @@ const highestCount = (numArray) => {
 const calcTriangleArea = (base, height) => (base * height) / 2;
 const calcRectangleArea = (base, height) => base * height;
 const calcAllAreas = (base, height, form) => {
-  if (form === 'triangle') {
-    return `O valor da área do triângulo é de:${calcTriangleArea(base, height)}`;
-  } if (form === 'rectangle') {
-    return `O valor da área do retângulo é de:${calcRectangleArea(base, height)}`;
-  } else {
-    return 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
-  }
+  let statament = ' ';
+  switch(form) {
+    case 'triângulo':
+      statament = `O valor da área do triângulo é de:${calcTriangleArea(base, height)}`;
+      break;
+    case 'retângulo':
+      statament = `O valor da área do retângulo de:${calcRectangleArea(base, height)}`;
+      break;
+    default:
+      statament = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
+    }
+  return statament;
 }
 
 // Desafio 7 - Crie a função catAndMouse
@@ -77,15 +82,13 @@ const decode = (string) => string.replace(1, 'a').replace(2, 'e').replace(3, 'i'
 // Desafio 10 - Crie a função techList
 
 const techList = (array, string) => {
-  let arrayList = array.sort();
-  let objectList = { };
-
-  for(let index = 0; index < arrayList.length; index += 1){
-     objectList = { 
-      'tech' : arrayList[index], 'name' : string};
-return objectList;
-  }
+  let arrayList = [ ];
+  for (item of array.sort()) {
+     arrayList.push({ tech: item, name: string} );
+  }  
+  return arrayList;
 }
+
 
 // Não modifique essas linhas
 module.exports = {
