@@ -1,5 +1,10 @@
 // Desafio 1 - Crie a função compareTrue
-const compareTrue = (val1 && val2); Boolean;
+const compareTrue = (val1, val2) => {
+  if (val1 && val2){
+    return true;
+  }
+  return false;
+}
 
 // Desafio 2 - Crie a função splitSentence
 
@@ -17,11 +22,11 @@ const footballPoints = (wins, ties) => (wins * 3) + ties;
 const highestCount = (numArray) => {
   let higherNumber = Math.max.apply(null, numArray);
   let count = 0;
-  for (let item of numArray) {
-    if (item === higherNumber) {
-    count += 1;
-    };
-  }
+    for (let item of numArray) {
+      if (item === higherNumber) {
+        count += 1;
+      }
+    }
   return count;
 }
 
@@ -30,17 +35,17 @@ const highestCount = (numArray) => {
 const calcTriangleArea = (base, height) => (base * height) / 2;
 const calcRectangleArea = (base, height) => base * height;
 const calcAllAreas = (base, height, form) => {
-  let statament = ' ';
-  switch(form) {
-    case 'triângulo':
-      statament = `O valor da área do triângulo é de:${calcTriangleArea(base, height)}`;
-      break;
-    case 'retângulo':
-      statament = `O valor da área do retângulo de:${calcRectangleArea(base, height)}`;
-      break;
-    default:
-      statament = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
-    }
+let statament = ' ';
+switch (form) {
+  case 'triângulo':
+    statament = `O valor da área do triângulo é de:${calcTriangleArea(base, height)}`;
+    break;
+  case 'retângulo':
+    statament = `O valor da área do retângulo de:${calcRectangleArea(base, height)}`;
+    break;
+  default:
+    statament = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
+  };
   return statament;
 }
 
@@ -51,27 +56,35 @@ const catAndMouse = (mouse, cat1, cat2) => {
     return 'cat2';
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+  } (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
-  }
+  };
 }
 
 // Desafio 8 - Crie a função fizzBuzz
 
-function fizzBuzz(arrayNum) {
-let array2 = [ ];
-for (let index of arrayNum) {
-  if (index % 3 === 0 && index % 5 === 0) {
-    array2.push('fizzBuzz');
-  } else if (index % 3 === 0) {
-    array2.push('fizz');
-  } else if (index % 5 === 0) {
-    array2.push('buzz');
+const checkNumber = (number) => {
+let number = ' ';
+  if (number % 3 === 0 && number% 5 === 0) {
+    number = 'fizzBuzz';
+  } else if (number % 3 === 0) {
+    number = 'fizz';
+  } else if (number % 5 === 0) {
+    number = 'buzz';
   } else {
-    array2.push('bug!');
-  }
-} return array2;
+    number = 'bug!';
+    }
+return number;
 }
+
+const fizzBuzz = (arrayNum) => {
+let array2 = [ ];
+  for (let index of array2) {
+    array2.push(checkNumber(index));
+  }
+  return array2;
+} 
+
 
 // Desafio 9 - Crie a função encode e a função decode
 
