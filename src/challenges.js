@@ -1,16 +1,12 @@
-const { string } = require("sharp/lib/is");
-
-// Desafio 1 - Crie a função compareTrue
-
+// Desafio 1 - Crie a função compareTruegit 
 const compareTrue = (val1, val2) => {
-  if (val1 && val2){
+  if (val1 && val2) {
     return true;
   }
   return false;
 }
 
-// Desafio 2 - Crie a função splitSentence
-
+// Desafio 2 - Crie a função splitSentence.
 const splitSentence = (sentence) => sentence.split('');
 
 // Desafio 3 - Crie a função concatName
@@ -35,11 +31,10 @@ const highestCount = (numArray) => {
 }
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
-
 const calcTriangleArea = (base, height) => (base * height) / 2;
 const calcRectangleArea = (base, height) => base * height;
 const calcAllAreas = (base, height, form) => {
-let statament = ' ';
+let statament = '';
 switch (form) {
   case 'triângulo':
     statament = `O valor da área do triângulo é de:${calcTriangleArea(base, height)}`;
@@ -54,7 +49,6 @@ return statament;
 }
 
 // Desafio 7 - Crie a função catAndMouse
-
 const catAndMouse = (mouse, cat1, cat2) => {
   if (Math.abs(cat2 - mouse) < Math.abs(cat1 - mouse)) {
     return 'cat2';
@@ -80,11 +74,11 @@ const checkNumber = (number) => {
   return number;
 };
 const fizzBuzz = (arrayNum) => {
-let array2 = [ ];
-  for (let index of array2) {
-    array2.push(checkNumber(index));
+let arrayTwo = [];
+  for (let index of arrayTwo) {
+    arrayTwo.push(checkNumber(index));
   };
-  return array2;
+  return arrayTwo;
 } 
 
 // Desafio 9 - Crie a função encode e a função decode
@@ -105,7 +99,6 @@ const decode = (string) => {
 }
 
 // Desafio 10 - Crie a função techList
-
 const techList = (array, string) => {
   let arrayList = [];
   for (item of array.sort()) {
