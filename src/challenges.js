@@ -60,7 +60,7 @@ const catAndMouse = (mouse, cat1, cat2) => {
     return 'cat2';
   } else if (Math.abs(cat1 - mouse) < Math.abs(cat2 - mouse)) {
     return 'cat1';
-  } (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
+  } else if (Math.abs(cat1 - mouse) === Math.abs(cat2 - mouse)) {
     return 'os gatos trombam e o rato foge';
   };
 }
@@ -68,7 +68,6 @@ const catAndMouse = (mouse, cat1, cat2) => {
 // Desafio 8 - Crie a função fizzBuzz
 
 const checkNumber = (number) => {
-let number = '';
   if (number % 3 === 0 && number% 5 === 0) {
     number = 'fizzBuzz';
   } else if (number % 3 === 0) {
