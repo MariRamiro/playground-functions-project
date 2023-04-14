@@ -1,4 +1,7 @@
+const { string } = require("sharp/lib/is");
+
 // Desafio 1 - Crie a função compareTrue
+
 const compareTrue = (val1, val2) => {
   if (val1 && val2){
     return true;
@@ -8,7 +11,7 @@ const compareTrue = (val1, val2) => {
 
 // Desafio 2 - Crie a função splitSentence
 
-const splitSentence = (sentence) => sentence.split(' ');
+const splitSentence = (sentence) => sentence.split('');
 
 // Desafio 3 - Crie a função concatName
 
@@ -19,14 +22,15 @@ const concatName = (array1) => `${array1[array1.length - 1]}, ${array1[0]}`;
 const footballPoints = (wins, ties) => (wins * 3) + ties;
 
 // Desafio 5 - Crie a função highestCount
+
 const highestCount = (numArray) => {
   let higherNumber = Math.max.apply(null, numArray);
   let count = 0;
     for (let item of numArray) {
       if (item === higherNumber) {
         count += 1;
-      }
-    }
+      };
+    };
   return count;
 }
 
@@ -46,7 +50,7 @@ switch (form) {
   default:
     statament = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
   };
-  return statament;
+return statament;
 }
 
 // Desafio 7 - Crie a função catAndMouse
@@ -64,7 +68,7 @@ const catAndMouse = (mouse, cat1, cat2) => {
 // Desafio 8 - Crie a função fizzBuzz
 
 const checkNumber = (number) => {
-let number = ' ';
+let number = '';
   if (number % 3 === 0 && number% 5 === 0) {
     number = 'fizzBuzz';
   } else if (number % 3 === 0) {
@@ -73,35 +77,43 @@ let number = ' ';
     number = 'buzz';
   } else {
     number = 'bug!';
-    }
-return number;
-}
-
+  }
+  return number;
+};
 const fizzBuzz = (arrayNum) => {
 let array2 = [ ];
   for (let index of array2) {
     array2.push(checkNumber(index));
-  }
+  };
   return array2;
 } 
 
-
 // Desafio 9 - Crie a função encode e a função decode
 
-const encode = (string) => string.replace('a', 1).replace('e', 2).replace('i', 3).replace('o', 4).replace('u', 5);
-
-const decode = (string) => string.replace(1, 'a').replace(2, 'e').replace(3, 'i').replace(4, 'o').replace(5, 'u');
+const encode = (string) => { 
+  string.replace('a', 1);
+  string.replace('e', 2); 
+  string.replace('i', 3);
+  string.replace('o', 4); 
+  string.replace('u', 5);
+};
+const decode = (string) => {
+  string.replace(1, 'a');
+  string.replace(2, 'e');
+  string.replace(3, 'i'); 
+  string.replace(4, 'o');
+  string.replace(5, 'u');
+}
 
 // Desafio 10 - Crie a função techList
 
 const techList = (array, string) => {
-  let arrayList = [ ];
+  let arrayList = [];
   for (item of array.sort()) {
-     arrayList.push({ tech: item, name: string} );
-  }  
+    arrayList.push({ tech: item, name: string});
+  };
   return arrayList;
 }
-
 
 // Não modifique essas linhas
 module.exports = {
