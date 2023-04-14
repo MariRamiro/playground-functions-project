@@ -5,6 +5,7 @@ const compareTrue = (val1, val2) => {
   }
   return false;
 }
+compareTrue(2,3)
 
 // Desafio 2 - Crie a função splitSentence.
 const splitSentence = (sentence) => sentence.split('');
@@ -18,7 +19,6 @@ const concatName = (array1) => `${array1[array1.length - 1]}, ${array1[0]}`;
 const footballPoints = (wins, ties) => (wins * 3) + ties;
 
 // Desafio 5 - Crie a função highestCount
-
 const highestCount = (numArray) => {
   let higherNumber = Math.max.apply(null, numArray);
   let count = 0;
