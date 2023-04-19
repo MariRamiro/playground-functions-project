@@ -9,7 +9,6 @@ const compareTrue = (val1, val2) => {
 // Desafio 2 - Crie a função splitSentence.
 const splitSentence = (sentence) => sentence.split(' ');
 
-
 // Desafio 3 - Crie a função concatName
 
 const concatName = (array1) => `${array1[array1.length - 1]}, ${array1[0]}`;
@@ -26,8 +25,8 @@ const highestCount = (numArray) => {
     if (item === higherNumber) {
       count += 1;
     }
-  };
-  return count
+  }
+  return count;
 };
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
@@ -75,8 +74,8 @@ const checkNumber = (number) => {
 };
 const fizzBuzz = (arrayNum) => {
   let arrayTwo = [ ];
-  for (let index of arrayNum) {
-    arrayTwo.push(checkNumber(index));
+  for (let item of arrayNum) {
+    arrayTwo.push(checkNumber(item));
   }
   return arrayTwo;
 };
