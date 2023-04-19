@@ -31,20 +31,20 @@ const highestCount = (numArray) => {
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
 const calcTriangleArea = (base, height) => (base * height) / 2;
-const calcRectangleArea = (base, height) => base * height;
+const calcRectangleArea = (base, height) => (base * height);
 const calcAllAreas = (base, height, form) => {
   let statament = ' ';
-    switch (form) {
-    case 'triângulo':
+  switch (form) {
+  case 'triângulo':
     statament = `O valor da área do triângulo é de:${calcTriangleArea(base, height)}`;
     break;
-    case 'retângulo':
+  case 'retângulo':
     statament = `O valor da área do retângulo de:${calcRectangleArea(base, height)}`;
     break;
-    default:
+  default:
     statament = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
-    };
-  return statament
+  }
+  return statament;
 };
 
 // Desafio 7 - Crie a função catAndMouse
@@ -73,7 +73,7 @@ const checkNumber = (number) => {
   return number;
 };
 const fizzBuzz = (arrayNum) => {
-  let arrayTwo = [ ];
+  let arrayTwo = [];
   for (let item of arrayNum) {
     arrayTwo.push(checkNumber(item));
   }
@@ -82,24 +82,12 @@ const fizzBuzz = (arrayNum) => {
 
 // Desafio 9 - Crie a função encode e a função decode
 
-const encode = (string) => { 
-  string.replace('a', 1);
-  string.replace('e', 2);
-  string.replace('i', 3);
-  string.replace('o', 4);
-  string.replace('u', 5);
-};
-const decode = (string) => {
-  string.replace(1, 'a');
-  string.replace(2, 'e');
-  string.replace(3, 'i');
-  string.replace(4, 'o');
-  string.replace(5, 'u');
-};
+const encode = (string) => string.replaceAll('a', 1).replaceAll('e', 2).replaceAll('i', 3).replaceAll('o', 4).replaceAll('u', 5);
+const decode = (string) => string.replaceAll(1, 'a').replaceAll(2, 'e').replaceAll(3, 'i').replaceAll(4, 'o').replaceAll(5, 'u');
 
 // Desafio 10 - Crie a função techList
 const techList = (array, string) => {
-  let arrayList = [ ];
+  let arrayList = [];
   for (item of array.sort()) {
     arrayList.push({ tech: item, name: string });
   }
