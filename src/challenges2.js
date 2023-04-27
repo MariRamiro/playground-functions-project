@@ -1,5 +1,4 @@
 // Desafio 11 - Crie a função generatePhoneNumber
-
 const generatePhoneNumber = (arrayNumbers) =>{
   if(arrayNumbers.length !== 11){
     return 'Array com tamanho incorreto.';
@@ -15,13 +14,12 @@ const generatePhoneNumber = (arrayNumbers) =>{
     if(arrayNumbers[index] === arrayNumbers[number]){
       cont += 1;
     }
-    if(cont > 3){
+    if(cont >= 3){
       return 'não é possível gerar um número de telefone com esses valores'
     }
   }
 }
-return `(${arrayNumbers[0]}${arrayNumbers[1]}) ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[4]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`
-
+return `(${arrayNumbers[0]}${arrayNumbers[1]}) ${arrayNumbers[2]}${arrayNumbers[3]}${arrayNumbers[4]}${arrayNumbers[5]}${arrayNumbers[6]}-${arrayNumbers[7]}${arrayNumbers[8]}${arrayNumbers[9]}${arrayNumbers[10]}`;
 }
 
 // Desafio 12 -  Crie a função triangleCheck
