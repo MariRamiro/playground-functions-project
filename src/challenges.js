@@ -30,39 +30,24 @@ const highestCount = (numArray) => {
 };
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
-// const calcTriangleArea = (base, height) => (base * height) / 2;
-// const calcRectangleArea = (base, height) => (base * height);
-// const calcAllAreas = (base, height, form) => {
-// let statament = ' ';
-// switch (form) {
-//   case 'triângulo':
-//     statament = `O valor da área do triângulo é de:${calcTriangleArea(base, height)}`;
-//     break;
-//   case 'retângulo':
-//     statament = `O valor da área do retângulo de:${calcRectangleArea(base, height)}`;
-//     break;
-//   default:
-//     statament = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
-//   }
-//   return statament;
-// };
-
-///
 const calcTriangleArea = (base, height) => (base * height) / 2;
 const calcRectangleArea = (base, height) => (base * height);
 const calcAllAreas = (base, height, form) => {
-  switch (form) {
-    case 'triângulo':
-      console.log(`O valor da área do triângulo é de:${calcTriangleArea(base, height)}`);
-      break;
-    case 'retângulo':
-      console.log(`O valor da área do retângulo de:${calcRectangleArea(base, height)}`);
-      break;
-    default:
-      console.log ('Não foi possível fazer o cálculo, insira uma forma geométrica válida');
+let statament = ' ';
+switch (form) {
+  case 'triângulo':
+    statament = `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`;
+    break;
+  case 'retângulo':
+    statament = `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`;
+    break;
+  default:
+    statament = 'Não foi possível fazer o cálculo, insira uma forma geométrica válida';
   }
-  return console.log;
+  return statament;
 };
+
+//
 
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
