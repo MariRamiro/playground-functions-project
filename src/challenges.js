@@ -112,3 +112,4 @@ module.exports = {
   splitSentence: typeof splitSentence === 'function' ? splitSentence : (() => {}),
   techList: typeof techList === 'function' ? techList : (() => {}),
 };
+
